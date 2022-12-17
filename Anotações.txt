@@ -1,0 +1,11 @@
+Para instalar as dependências do arquivo package.json, use o comando:
+    npm install
+
+A pasta dist é a que contém os arquivos compartilhados com o servidor web.
+
+Dentro do package.json existem alguns scripts, que podem ser executados
+por meio do comando: 
+    npm run <nome do script>.
+
+Para rodar o servidor web, use o script server: 
+     npm run server.
