@@ -17,3 +17,24 @@ O import de um módulo JavaScript é diferente do import de um script normal:
     <script type="module" src="js/app.js"></script>
 
 Repare na propriedade type="module".
+
+A sintaxe de criação de classes no JavaScript é a seguinte:
+    export class Classe {
+        #propriedade1;
+        #propriedade2;
+        #propriedade3;
+
+        #metodoPrivado() {
+            console.log("Método privado.")
+        }
+    }
+
+Por padrão os membros da classe (propriedades e métodos) são públicos. Para
+torná-los privados, preceda-os com cerquilha.
+
+Módulos são executados dentro do seu escopo. Portanto, sempre que você precisar
+usar um módulo fora do seu escopo fechado, exporte esse módulo (no exemplo, a
+classe Classe é o módulo que está sendo exportado).
+
+Sintaxe para IMPORTAÇÃO de um módulo em um outro arquivo .js:
+    import { Classe } from './modulo/classe.js';
