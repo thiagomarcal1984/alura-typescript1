@@ -10,3 +10,6 @@ console.log(negociacao.data); // Acesso via getter DECLARADO na classe.
 console.log(negociacao.quantidade)
 console.log(negociacao.valor)
 console.log(negociacao.volume)
+
+// const negociacao2 = new Negociacao(new Date()); // Faltam parâmetros.
+// console.log(negociacao2.volume); // Retorna NaN. Não deveria.

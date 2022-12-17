@@ -72,4 +72,8 @@ Como declarar os getters:
 
 Para invocar o getter, não é necessário sufixar com parênteses:
     const classe = new Classe(1, 2, "Três");
-    consoloe.log(classe.propriedade3); // Retorna "Três"
+    console.log(classe.propriedade3); // Retorna "Três"
+
+Em JavaScript, os erros só aparecem em tempo de execução, já que não há uma
+compilação prévia. Usando TypeScript podemos forçar a checagem de erros antes
+que eles surjam em tempo de execução.
