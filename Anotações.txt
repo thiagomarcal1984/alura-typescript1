@@ -27,6 +27,12 @@ A sintaxe de criação de classes no JavaScript é a seguinte:
         #metodoPrivado() {
             console.log("Método privado.")
         }
+
+        constructor(p1, p2, p3) {
+            this.#propriedade1 = p1;
+            this.#propriedade2 = p2;
+            this.#propriedade3 = p3;
+        }
     }
 
 Por padrão os membros da classe (propriedades e métodos) são públicos. Para
@@ -38,3 +44,20 @@ classe Classe é o módulo que está sendo exportado).
 
 Sintaxe para IMPORTAÇÃO de um módulo em um outro arquivo .js:
     import { Classe } from './modulo/classe.js';
+
+De acordo com o ES2015 (EcmaScript2015), para criar o construtor de uma classe,
+use a palavra reservada constructor:
+    export class Negociacao {
+        #data;
+        #quantidade;
+        #valor;
+
+        constructor(data, quantidade, valor) {
+            this.#data = data;
+            this.#quantidade = quantidade;
+            this.#valor = valor;
+        }
+    }
+
+Para criar a instância, use: 
+    const objeto = new Classe(true, "parm2", 3)
