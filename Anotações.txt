@@ -61,3 +61,15 @@ use a palavra reservada constructor:
 
 Para criar a instância, use: 
     const objeto = new Classe(true, "parm2", 3)
+
+Como declarar os getters:
+    classe Classe {
+        ...
+        get propriedade1() { // Na declação os parênteses são necessários.
+            return this.#propriedade1;
+        }
+    }
+
+Para invocar o getter, não é necessário sufixar com parênteses:
+    const classe = new Classe(1, 2, "Três");
+    consoloe.log(classe.propriedade3); // Retorna "Três"
