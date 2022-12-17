@@ -9,3 +9,11 @@ por meio do comando:
 
 Para rodar o servidor web, use o script server: 
      npm run server.
+
+Crie o arquivo app.js dentro da pasta dist/js. Esse arquivo será tratado como
+um módulo.
+
+O import de um módulo JavaScript é diferente do import de um script normal:
+    <script type="module" src="js/app.js"></script>
+
+Repare na propriedade type="module".
