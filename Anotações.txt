@@ -174,3 +174,7 @@ Adote a tipagem nos métodos do TypeScript também!
 
 No VS Code, você consegue descobrir o retorno de um método colocando o mouse
 sobre o nome dele. Isso facilita para explicitarmos o retorno.
+
+No modelo de negócio do curso, a lista de negociações não pode permitir remoção
+de itens. Por isso, um modelo separado vai ser feito para conter a listagem
+de negociações, que só permitirá consulta e inserção.
