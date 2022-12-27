@@ -1,10 +1,12 @@
 import { Negociacao } from "../models/negociacao.js"; 
+import { Negociacoes } from "../models/negociacoes.js";
 // Não se esqueça de colocar a extensão .js ao importar.
 
 export class NegociacaoController {
     private inputData: HTMLInputElement;
     private inputQuantidade: HTMLInputElement;
     private inputValor: HTMLInputElement;
+    private negociacoes = new Negociacoes();
 
     constructor() {
         this.inputData = document.querySelector('#data');
@@ -14,7 +16,9 @@ export class NegociacaoController {
 
     adiciona(): void {
         const negociacao = this.criaNegociacao()
-        console.log(negociacao)
+        this.negociacoes.adiciona(negociacao)
+        this.negociacoes.lista().pop() // Aqui está a fragilidade do código.
+        console.log(this.negociacoes.lista()) // A lista vai estar vazia.
         this.limparFormulario()
     }
 

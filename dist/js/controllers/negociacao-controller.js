@@ -1,14 +1,18 @@
 import { Negociacao } from "../models/negociacao.js";
+import { Negociacoes } from "../models/negociacoes.js";
 // Não se esqueça de colocar a extensão .js ao importar.
 export class NegociacaoController {
     constructor() {
+        this.negociacoes = new Negociacoes();
         this.inputData = document.querySelector('#data');
         this.inputQuantidade = document.querySelector('#quantidade');
         this.inputValor = document.querySelector('#valor');
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
-        console.log(negociacao);
+        this.negociacoes.adiciona(negociacao);
+        this.negociacoes.lista().pop(); // Aqui está a fragilidade do código.
+        console.log(this.negociacoes.lista()); // A lista vai estar vazia.
         this.limparFormulario();
     }
     criaNegociacao() {
