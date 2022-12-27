@@ -127,3 +127,7 @@ e o comando watch (que não estava configurado até agora):
     "start": "concurrently \"npm run watch\" \"npm run server\"",
 
 Agora, ao invés de rodarmos npm run server, vamos rodar npm run start.
+
+A sintaxe para atributos privados no TypeScript é diferente do JavaScript:
+    private _propriedade; // Sintaxe do TypeScript.
+    #propriedade; // Sintaxe do JavaScript.
