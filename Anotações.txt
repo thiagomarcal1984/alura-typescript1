@@ -103,6 +103,7 @@ Parâmetros mínimos no tsconfig.json:
     {
         "compilerOptions": {
             "noEmitOnError": true, // Não gerar o JS se a compilação falhar.
+            "noImplicitAny": true, // Força tipagem nas classes do TypeScript.
             "outDir": "dist/js", // Onde o tsc distribuirá o js compilado.
             "target": "ES6" // Versão do EcmaScript que será usada.
         },
@@ -150,3 +151,9 @@ a extensão .js, senão o código não funciona.
 
 Quando o código é executado, os dados da negociação estão sendo exibidos como
 string ao invés de representarem os tipos adequados (Date e Integer).
+
+O TypeScript determina o tipo any para as propriedades de suas classes por 
+padrão. Mas vamos forçar a tipagem durante o curso, usando "noImplicitAny" no
+arquivo tsconfig.json.
+
+A tipagem no arquivo negociacao-controller.ts vai ser feita na próxima aula.

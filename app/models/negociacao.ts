@@ -1,11 +1,11 @@
 export class Negociacao {
     // No JavaScript, a sintaxe para atributos privados é: #propriedade.
     // No TypeScript, a sintaxe para atributos privados é: private _propriedade.
-    private _data;
-    private _quantidade;
-    private _valor;
+    private _data: Date;
+    private _quantidade: number;
+    private _valor: number;
 
-    constructor(data, quantidade, valor) {
+    constructor(data: Date, quantidade: number, valor: number) {
         this._data = data;
         this._quantidade = quantidade;
         this._valor = valor;
