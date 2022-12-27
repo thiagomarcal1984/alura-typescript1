@@ -131,3 +131,19 @@ Agora, ao invés de rodarmos npm run server, vamos rodar npm run start.
 A sintaxe para atributos privados no TypeScript é diferente do JavaScript:
     private _propriedade; // Sintaxe do TypeScript.
     #propriedade; // Sintaxe do JavaScript.
+
+O arquivo negociao-controller.ts vai ser a ponte entre o HTML e o modelo do TS.
+
+As duas sintaxes a seguir são iguais: 
+    form.addEventListener('submit', event => { // Aqui é igual...
+        ...
+    })
+
+    form.addEventListener('submit', (event: Event) => { // ... a isto aqui.
+        ...
+    })
+
+    event => { ... } === (event: Event) = { ... }
+
+Ao usar o autoimport do código TypeScript no VS Code, é necessário acrescentar
+a extensão .js, senão o código não funciona.

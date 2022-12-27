@@ -1,13 +1,10 @@
-import { Negociacao } from './models/negociacao.js';
+// import { NegociacaoController } from "./controllers/negociacao-controller";
+// O autoimport do VS Code não coloca a extensão .js, necessária no curso.
+import { NegociacaoController } from "./controllers/negociacao-controller.js";
 
-const negociacao = new Negociacao(new Date(), 10, 100);
-// console.log(negociacao.data); // data não declarada (está, mas privada).
-// console.log(negociacao.#data); // erro de sintaxe: não acessível.
-// negociacao.data = "Uma data"; // erro de sintaxe: não há setter.
-// daqui pra frente, o código conterá os getters.
-
-console.log(negociacao.data); // Acesso via getter DECLARADO na classe.
-
-// const negociacao2 = new Negociacao(new Date()); // Faltam parâmetros.
-const negociacao2 = new Negociacao(new Date(), 10, 100);
-console.log(negociacao2.volume); // Agora o volume será exibido corretamente.
+const controller = new NegociacaoController();
+const form = document.querySelector(".form");
+form.addEventListener('submit', (event: Event) => {
+    event.preventDefault()
+    controller.adiciona();
+})
