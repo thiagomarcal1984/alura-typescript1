@@ -178,3 +178,6 @@ sobre o nome dele. Isso facilita para explicitarmos o retorno.
 No modelo de negócio do curso, a lista de negociações não pode permitir remoção
 de itens. Por isso, um modelo separado vai ser feito para conter a listagem
 de negociações, que só permitirá consulta e inserção.
+
+A classe Negociacoes foi modificada para permitir inserção e listagem. Mas como
+impedir a atualização dos valores da lista?
