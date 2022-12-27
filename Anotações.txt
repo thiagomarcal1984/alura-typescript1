@@ -83,3 +83,6 @@ Para instalar o TypeScript, use o comando:
 
     Onde o @ precede a versão que será usada, e o parâmetro --save-dev instala 
     a dependência apenas no dev environment (não instala em produção).
+
+Dorme com essa: npm significa Node Package Manager. Então, para instalar o 
+TypeScript, o Node.js é obrigatório.
