@@ -86,3 +86,13 @@ Para instalar o TypeScript, use o comando:
 
 Dorme com essa: npm significa Node Package Manager. Então, para instalar o 
 TypeScript, o Node.js é obrigatório.
+
+Ao renomear os arquivos .js (JavaScript) para .ts (TypeScript), o VS Code 
+já identifica os erros de sintaxe antes mesmo da compilação do TypeScript.
+
+O código TypeScript vai ficar na pasta app; o código visível pelo browser vai
+estar na pasta dist.
+
+O processo de compilação do TypeScript tem como resultado atualizações na pasta
+dist na medida em que a pasta app for alterada.
+
