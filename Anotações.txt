@@ -147,3 +147,6 @@ As duas sintaxes a seguir são iguais:
 
 Ao usar o autoimport do código TypeScript no VS Code, é necessário acrescentar
 a extensão .js, senão o código não funciona.
+
+Quando o código é executado, os dados da negociação estão sendo exibidos como
+string ao invés de representarem os tipos adequados (Date e Integer).
