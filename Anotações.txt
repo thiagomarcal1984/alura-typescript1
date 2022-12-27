@@ -186,3 +186,6 @@ O spread operator (...) é uma forma de ESPALHAR elementos de um objeto ITERÁVE
     const numeros = [0,1,2]
     const positivos = [...numeros, 3, 4]
     console.log(positivos) // Resultado: 0,1,2,3,4 .
+
+O tipo ReadonlyArray impede qualquer mudança nele depois de instanciado
+(não permite escrita, alteração ou remoção).

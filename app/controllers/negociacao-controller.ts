@@ -17,8 +17,8 @@ export class NegociacaoController {
     adiciona(): void {
         const negociacao = this.criaNegociacao()
         this.negociacoes.adiciona(negociacao)
-        this.negociacoes.lista().pop() // A referência original está protegida.
-        console.log(this.negociacoes.lista()) // A lista vai ter o acréscimo.
+        // this.negociacoes.lista().pop() // Método indisponível.
+        console.log(this.negociacoes.lista())
         this.limparFormulario()
     }
 
