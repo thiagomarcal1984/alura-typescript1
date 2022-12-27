@@ -96,3 +96,18 @@ estar na pasta dist.
 O processo de compilação do TypeScript tem como resultado atualizações na pasta
 dist na medida em que a pasta app for alterada.
 
+As configurações do compilador TypeScript ficarão no arquivo tsconfig.json, na 
+raiz do projeto.
+
+Parâmetros mínimos no tsconfig.json:
+    {
+        "compilerOptions": {
+            "outDir": "dist/js", // Onde o tsc distribuirá o js compilado.
+            "target": "ES6" // Versão do EcmaScript que será usada.
+        },
+        "include": ["app/**/*"] // Inclui na compilação as subpastas de app.
+            // app = pasta raiz da compilação; ** = subpastas; * = arquivos.
+    }
+
+Note que o arquivo negociacao.js que foi gerado tem mais coisas que o 
+negociacao.ts. Isso é para que o .js tenha as limitações do TypeScript.
