@@ -77,3 +77,9 @@ Para invocar o getter, não é necessário sufixar com parênteses:
 Em JavaScript, os erros só aparecem em tempo de execução, já que não há uma
 compilação prévia. Usando TypeScript podemos forçar a checagem de erros antes
 que eles surjam em tempo de execução.
+
+Para instalar o TypeScript, use o comando: 
+    npm install typescript@4.2.2 --save-dev
+
+    Onde o @ precede a versão que será usada, e o parâmetro --save-dev instala 
+    a dependência apenas no dev environment (não instala em produção).
