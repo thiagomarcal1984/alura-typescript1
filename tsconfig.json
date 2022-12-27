@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "noEmitOnError": true,
         "outDir": "dist/js",
         "target": "ES6"
     },

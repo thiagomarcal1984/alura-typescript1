@@ -102,6 +102,7 @@ raiz do projeto.
 Parâmetros mínimos no tsconfig.json:
     {
         "compilerOptions": {
+            "noEmitOnError": true, // Não gerar o JS se a compilação falhar.
             "outDir": "dist/js", // Onde o tsc distribuirá o js compilado.
             "target": "ES6" // Versão do EcmaScript que será usada.
         },
