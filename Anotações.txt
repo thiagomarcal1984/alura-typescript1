@@ -112,3 +112,18 @@ Parâmetros mínimos no tsconfig.json:
 
 Note que o arquivo negociacao.js que foi gerado tem mais coisas que o 
 negociacao.ts. Isso é para que o .js tenha as limitações do TypeScript.
+
+Acrescentando o parâmetro -w no compilador TypeScript (tsc -w) faz com que 
+as mudanças no diretório de origem (app) sejam vigiadas (watch).
+
+Acrescente o código a seguir em package.json:
+    "scripts": {
+        ...
+        "watch": "tsc -w"
+    },
+
+Note que dentro de scripts já havia o script "start", que roda o servidor web
+e o comando watch (que não estava configurado até agora):
+    "start": "concurrently \"npm run watch\" \"npm run server\"",
+
+Agora, ao invés de rodarmos npm run server, vamos rodar npm run start.
