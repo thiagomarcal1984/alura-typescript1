@@ -11,8 +11,8 @@ export class NegociacaoController {
     adiciona() {
         const negociacao = this.criaNegociacao();
         this.negociacoes.adiciona(negociacao);
-        this.negociacoes.lista().pop(); // Aqui está a fragilidade do código.
-        console.log(this.negociacoes.lista()); // A lista vai estar vazia.
+        this.negociacoes.lista().pop(); // A referência original está protegida.
+        console.log(this.negociacoes.lista()); // A lista vai ter o acréscimo.
         this.limparFormulario();
     }
     criaNegociacao() {

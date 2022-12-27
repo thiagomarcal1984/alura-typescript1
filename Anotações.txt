@@ -181,3 +181,8 @@ de negociações, que só permitirá consulta e inserção.
 
 A classe Negociacoes foi modificada para permitir inserção e listagem. Mas como
 impedir a atualização dos valores da lista?
+
+O spread operator (...) é uma forma de ESPALHAR elementos de um objeto ITERÁVEL.
+    const numeros = [0,1,2]
+    const positivos = [...numeros, 3, 4]
+    console.log(positivos) // Resultado: 0,1,2,3,4 .

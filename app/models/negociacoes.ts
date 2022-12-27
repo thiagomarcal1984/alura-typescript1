@@ -8,6 +8,7 @@ export class Negociacoes {
     }
 
     lista(): Array<Negociacao> {
-        return this.negociacoes
+        // return this.negociacoes // Retorna a lista mesmo.
+        return [...this.negociacoes] // Retorna cópia da lista.
     }
 }
