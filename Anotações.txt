@@ -157,3 +157,20 @@ padrão. Mas vamos forçar a tipagem durante o curso, usando "noImplicitAny" no
 arquivo tsconfig.json.
 
 A tipagem no arquivo negociacao-controller.ts vai ser feita na próxima aula.
+
+Adote a tipagem nos métodos do TypeScript também!
+    adiciona(): void {
+        const negociacao = this.criaNegociacao()
+        console.log(negociacao)
+    }
+
+    criaNegociacao(): Negociacao {
+        const exp = /-/g; // Busca globalmente um hífen. Tipo: RegExp.
+        const date = new Date(this.inputData.value.replace(exp, ','));
+        const quantidade = parseInt(this.inputQuantidade.value);
+        const valor = parseFloat(this.inputValor.value);
+        return new Negociacao(date, quantidade, valor);
+    }
+
+No VS Code, você consegue descobrir o retorno de um método colocando o mouse
+sobre o nome dele. Isso facilita para explicitarmos o retorno.
