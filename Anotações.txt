@@ -194,7 +194,7 @@ O TypeScript tem um meio mais simples para declarar propriedades na classe e
 atribuir valores no construtor dela ao mesmo tempo:
     export class Negociacao {
         private valorForaDoConstrutor: any;
-        
+
         constructor(
             private _data: Date,
             private _quantidade: number,
@@ -203,3 +203,10 @@ atribuir valores no construtor dela ao mesmo tempo:
 
         ...
     }
+
+Sintaxes semelhantes para declarar arrays (mutáveis e imutáveis):
+    private negociacoes: Array<Negociacao> = [];
+    private negociacoes: Negociacao[] = [];
+
+    lista(): ReadonlyArray<Negociacao> { ... }
+    lista(): readonly Negociacao[] { ... }
