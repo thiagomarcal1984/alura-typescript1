@@ -210,3 +210,18 @@ Sintaxes semelhantes para declarar arrays (mutáveis e imutáveis):
 
     lista(): ReadonlyArray<Negociacao> { ... }
     lista(): readonly Negociacao[] { ... }
+
+Sintaxe simplificada para criar propriedades somente leitura (sem precisar de
+declarar os getters explicitamente, basta usar a palavra readonly):
+
+    export class Negociacao {
+        private valorForaDoConstrutor: any;
+
+        constructor(
+            private readonly data: Date,
+            private readonly quantidade: number,
+            private readonly valor: number
+        ) {}
+        // getters não precisam ser declarados.
+        ...
+    }
