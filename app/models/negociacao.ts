@@ -4,10 +4,17 @@ export class Negociacao {
 
     // Sintaxe resumida de declaração/atribuição de propriedades no construtor.
     constructor(
-        private readonly data: Date,
+        private _data: Date,
         private readonly quantidade: number,
         private readonly valor: number
     ) {}
+
+    get data(): Date {
+        // A linha a seguir evita modificações na data do objeto.
+        // Apenas a cópia é modificada (técnica de programação defensiva).
+        const data = new Date(this._data.getTime())
+        return data
+    }
 
     get volume(): number {
         return this.quantidade * this.valor;

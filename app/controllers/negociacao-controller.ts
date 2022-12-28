@@ -16,6 +16,8 @@ export class NegociacaoController {
 
     adiciona(): void {
         const negociacao = this.criaNegociacao()
+        negociacao.data.setDate(12) // A data da negociação não será mudada.
+        // O getter da data retorna uma CÓPIA do objeto Date.
         this.negociacoes.adiciona(negociacao)
         // this.negociacoes.lista().pop() // Método indisponível.
         console.log(this.negociacoes.lista())

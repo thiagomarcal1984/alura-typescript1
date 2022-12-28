@@ -225,3 +225,7 @@ declarar os getters explicitamente, basta usar a palavra readonly):
         // getters não precisam ser declarados.
         ...
     }
+
+Um meio de proteger propriedades não primitivas em um objeto é fazer com que 
+seus getters retornem uma cópia do objeto. Essa é uma técnica da chamada 
+programação defensiva.
